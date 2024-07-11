@@ -5,4 +5,3 @@ print("Hourly wage: ")
 print(hourly_wage)
 print("Hours worked: ")
 print(hours_worked)
-
