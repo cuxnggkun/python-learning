@@ -8,10 +8,9 @@ series = [
 ]
 
 
-def print_show_info(tv_show):
+def print_show_info():
     for tv_show in series:
         print(f"{tv_show['title']} ({tv_show['initial_release']}) - {tv_show['seasons']} seasons")
 
 
-print_show_info(series)
-
+print_show_info()

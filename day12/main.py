@@ -1,6 +1,11 @@
-def get_even_numbers(amount):
-    for number in range(1, amount + 1):
-        print(number * 2)
+#    012345
+s = "ABCDCDC"
+sub = "CDC"
 
+c = 0
 
-get_even_numbers(5)
+for i in range(0, len(s) - len(sub) + 1):
+    if s[i:i+len(sub)] == sub:
+        c += 1
+
+print(c)
