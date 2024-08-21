@@ -1,0 +1,16 @@
+Rolls: 4, 3
+Total: 7
+Average: 3.50
+
+Rolls: 2, 4
+Total: 6
+Average: 3.00
+
+Rolls: 1, 3
+Total: 4
+Average: 2.00
+
+Rolls: 4, 5
+Total: 9
+Average: 4.50
+
