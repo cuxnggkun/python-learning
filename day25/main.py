@@ -1,0 +1,1 @@
+print("Pine" or "Alice")
