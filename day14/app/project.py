@@ -1,10 +1,11 @@
 import os
 import ctypes
 
-FILE_NAME = "book.csv"
+Book = dict[str, str]
+FILE_NAME: str = "book.csv"
 
 
-def popup(title, text, style):
+def popup(title: str, text: str, style: int):
     return ctypes.windll.user32.MessageBoxW(0, text, title, style)
 
 
@@ -25,9 +26,9 @@ def add_book():
     popup("Add Book", "Succesful add book", 0)
 
 
-def find_book():
-    reading_list = get_book()
-    match_book = []
+def find_book() -> list[Book]:
+    reading_list: list[Book] = get_book()
+    match_book: list[Book] = []
 
     search_book = input("Enter your book to search: ").strip().lower()
 
@@ -38,7 +39,7 @@ def find_book():
     return match_book
 
 
-def get_book():
+def get_book() -> list[Book]:
     books = []
 
     with open(FILE_NAME) as reading_list:
@@ -55,7 +56,7 @@ def get_book():
     return books
 
 
-def show_books(books):
+def show_books(books: list[Book]):
     print()
 
     for book in books:
@@ -64,7 +65,7 @@ def show_books(books):
     print()
 
 
-def write_books(book_list):
+def write_books(book_list: list[Book]):
     with open(FILE_NAME, "w") as fo:
         for book in book_list:
             new_book = ",".join(book.values())
